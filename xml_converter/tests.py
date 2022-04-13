@@ -9,6 +9,7 @@ TEST_DIR = Path(__file__).parent / Path('test_files')
 class XMLConversionTestCase(TestCase):
     def setUp(self):
         self.client = Client()
+        self.maxDiff = None
 
     def test_connected_convert_empty_document(self):
         with (TEST_DIR / Path('empty.xml')).open() as fp:
