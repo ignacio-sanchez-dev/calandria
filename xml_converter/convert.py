@@ -19,7 +19,6 @@ def xml_to_dict(xml_file):
     Note: I also tried xmltodict and untagled libs but both lack of correct handling of repeated keys.
     I had to fallback to bare xml lib.
     """
-    item_name = lambda x: x
     data = xml_file.readlines()
     xml_string = "".join([line.decode('utf-8') for line in data])
     try:
